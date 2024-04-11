@@ -7,9 +7,6 @@ $homeController = new HomeController();
 
 $userController = new UserController();
 $roomController = new RoomController();
-
-
-
 // Kiểm tra xem người dùng đã đăng nhập hay chưa
 session_start();
 if (!isset($_SESSION['user'])) {
