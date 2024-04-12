@@ -9,7 +9,7 @@
     border-radius: 4px; /* Bo tròn góc */
 }   
 .nav-link-button:hover {
-    background-color: #0056b3; /* Màu xanh nhạt khi hover */
+    background-color: #ff4500; /* Màu xanh nhạt khi hover */
 }
 
 /* Để căn chỉnh văn bản bên trong nút */
