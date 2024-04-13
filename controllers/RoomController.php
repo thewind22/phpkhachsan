@@ -8,7 +8,6 @@ class RoomController {
         include 'models\db_connection.php';
         $this->roomModel = new Room($connection);
     }
-
     public function index() {
         $rooms = $this->roomModel->getAllRooms();
         include 'views/room/rooms.php';
@@ -17,7 +16,6 @@ class RoomController {
         $room = $this->roomModel->getRoomById($roomId);
         include 'views/room/room_details.php';
     }
-
     public function add() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $roomNumber = $_POST['RoomNumber'];
