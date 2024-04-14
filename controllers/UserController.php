@@ -29,7 +29,7 @@ class UserController {
             if ($user) {
                 session_start();
                 $_SESSION['user'] = $user;
-                header("Location: index.php?action=index");
+                header("Location: index.php?action=home");
                 exit; // Thêm exit ở đây để ngăn chặn việc thực thi mã tiếp theo
             } else {
                 $error = "Invalid email or password";

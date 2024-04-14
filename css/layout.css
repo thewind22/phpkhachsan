@@ -8,7 +8,12 @@
     color: #fff; /* Màu chữ trắng */
     border-radius: 4px; /* Bo tròn góc */
 }   
-
 .nav-link-button:hover {
-    background-color: #0056b3; /* Màu xanh nhạt khi hover */
+    background-color: #ff4500; /* Màu xanh nhạt khi hover */
+}
+
+/* Để căn chỉnh văn bản bên trong nút */
+.nav-link-button {
+    text-align: center; /* Căn giữa văn bản */
+    line-height: 1.5; /* Đảm bảo văn bản được căn giữa theo chiều dọc */
 }

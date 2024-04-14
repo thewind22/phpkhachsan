@@ -1,14 +1,11 @@
 <?php
 include 'controllers/RoomController.php';
 include 'controllers/UserController.php';
+include 'controllers/HomeController.php';
 
-
-
+$homeController = new HomeController();
 $userController = new UserController();
 $roomController = new RoomController();
-
-
-
 // Kiểm tra xem người dùng đã đăng nhập hay chưa
 session_start();
 if (!isset($_SESSION['user'])) {
@@ -19,10 +16,9 @@ if (!isset($_SESSION['user'])) {
         exit;
     }
 }
-
-$action = isset($_GET['action']) ? $_GET['action'] : 'index';
+$action = isset($_GET['action']) ? $_GET['action'] : 'getAllUsers';
 $roomId = isset($_GET['RoomID']) ? $_GET['RoomID'] : null;
-$userId = isset($_GET['UserID']) ? $_GET['UserID'] : null;
+$userId = isset($_GET['UserID']) ? $_GET['UserID'] : null;  
 
 
 
@@ -62,6 +58,9 @@ switch ($action) {
     case 'register':
           
             $userController->register();
+            break;
+    case 'home':
+            $homeController->home();
             break;
     case 'logout':
         // Nếu hành động là 'logout', kết thúc phiên đăng nhập và chuyển hướng đến trang đăng nhập
