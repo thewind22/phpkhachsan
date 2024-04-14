@@ -8,7 +8,6 @@ class UserController {
         include 'models\db_connection.php';
         $this->userModel = new User($connection);
     }
-
     public function register() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $username = $_POST['username'];
