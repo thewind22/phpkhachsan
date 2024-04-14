@@ -2,10 +2,18 @@
 include 'controllers/RoomController.php';
 include 'controllers/UserController.php';
 include 'controllers/HomeController.php';
+include 'controllers/ReservationController.php';
+
+
+$reservationController = new ReservationController();
 
 $homeController = new HomeController();
+
 $userController = new UserController();
 $roomController = new RoomController();
+
+
+
 // Kiểm tra xem người dùng đã đăng nhập hay chưa
 session_start();
 if (!isset($_SESSION['user'])) {
@@ -16,9 +24,12 @@ if (!isset($_SESSION['user'])) {
         exit;
     }
 }
+
 $action = isset($_GET['action']) ? $_GET['action'] : 'getAllUsers';
+
 $roomId = isset($_GET['RoomID']) ? $_GET['RoomID'] : null;
-$userId = isset($_GET['UserID']) ? $_GET['UserID'] : null;  
+$userId = isset($_SESSION['user']['UserID']) ? $_SESSION['user']['UserID'] : null;
+  
 
 
 
@@ -28,6 +39,9 @@ switch ($action) {
         break;
     case 'add':
         $roomController->add();
+        break;
+    case 'addReservation':
+        $reservationController->addReservation();
         break;
     case 'edit':
         $roomController->edit($roomId);
