@@ -1,10 +1,10 @@
-# phpkhachsan
+
 # phpkhachsan
 
 <h3 align="center">Một người đam mê kiểm thử phần mềm từ Việt Nam</h3>
 
 <p align="center">
-  <a href="mailto:nntamnhu01@gmail.com"><img src="https://img.shields.io/badge/Email-nntamnhu01%40gmail.com-blue.svg" alt="Email"></a>
+  <a href="mailto:nn01@gmail.com"><img src="https://img.shields.io/badge/Email-nntamnhu01%40gmail.com-blue.svg" alt="Email"></a>
 </p>
 
 <p align="center">
