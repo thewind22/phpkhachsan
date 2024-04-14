@@ -9,7 +9,7 @@ PHP KhachSan là một ứng dụng quản lý khách sạn được viết bằ
 1. **Clone repository**: Clone repository này về máy tính của bạn bằng lệnh sau:
 
     ```
-    git clone https://github.com/yourusername/phpkhachsan.git
+    git clone https://github.com/thewind22/phpkhachsan.git
     ```
 
 2. **Cấu hình môi trường**: Chuyển vào thư mục của dự án và tạo một tập tin cấu hình `.env` dựa trên tệp `.env.example`. Cung cấp thông tin cấu hình cho máy chủ MySQL của bạn.
